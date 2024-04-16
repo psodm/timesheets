@@ -18,37 +18,37 @@
                 <h1 class="display-5">Time Entry</h1>
             </div>
             <div class="row">
-                <form>
-                    <div class="mb-3">
+                <form id="formTimeEntry">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="" required>
                         <label for="name" class="form-label">Name</label>
-                        <input type="text" class="form-control" id="name" placeholder="" required>
                     </div>
-                    <div class="mb-3">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="projectId" name="projectId" placeholder="">
                         <label for="projectId" class="form-label">Project ID</label>
-                        <input type="text" class="form-control" id="projectId" placeholder="">
                     </div>
-                    <div class="mb-3">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="projectName" name="projectName" placeholder="">
                         <label for="projectName" class="form-label">Project Name</label>
-                        <input type="text" class="form-control" id="projectName" placeholder="" required>
                     </div>
-                    <div class="mb-3">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="task" name="task" placeholder="">
                         <label for="task" class="form-label">Task</label>
-                        <input type="text" class="form-control" id="task" placeholder="" required>
                     </div>
-                    <div class="mb-3">
+                    <div class="form-floating mb-3">
+                        <input type="date" class="form-control" id="date" name="date" placeholder="">
                         <label for="date" class="form-label">Date</label>
-                        <input type="date" class="form-control" id="date" placeholder="" required>
                     </div>
-                    <div class="mb-3">
+                    <div class="form-floating mb-3">
+                        <input type="number" class="form-control" id="hours" name="hours" placeholder="">
                         <label for="hours" class="form-label">Hours</label>
-                        <input type="number" class="form-control" id="hours" placeholder="" required>
                     </div>
-                    <div class="mb-3">
+                    <div class="form-floating mb-3">
+                        <textarea class="form-control" id="description" rows="5" name="description" placeholder=""></textarea>
                         <label for="description" class="form-label">Description</label>
-                        <textarea class="form-control" id="description" rows="3"></textarea>
                     </div>
                     <div class="mb-3">
-                        <button class="btn btn-primary">Add</button>
+                        <input class="btn btn-primary" type="submit" value="Add">
                     </div>
                 </form>
             </div>
@@ -56,6 +56,27 @@
         <div class="col-lg-7">
             <div class="row">
                 <h1 class="display-5">TimeSheet</h1>
+            </div>
+            <div class="row">
+                 <div class="col align-self-end">
+                    <div class="position-relative">
+                        <p class="position-absolute top-0 end-0" id="totalHours">Total Hours: 0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <table class="table table-striped align-middle" id="tableTimesheet">
+                    <thead>
+                        <tr>
+                        <th scope="col">Task</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Hours</th>
+                        <th scope="col">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
